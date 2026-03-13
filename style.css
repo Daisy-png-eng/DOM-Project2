@@ -1,0 +1,61 @@
+:root {
+    --border-color: #e3e5e4;
+    --background-color: #c3c7ca;
+    --text-color: #34444f;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    font-family: sans-serif;
+}
+
+.draggable-list {
+    border: 1px solid var(--border-color);
+    padding: 0;
+    list-style-type: none;
+    width: 350px;
+}
+.draggable-list li {
+    background-color: #fff;
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+    cursor: grab; 
+    transition: transform 0.2s ease;
+}
+
+.draggable-list li.over {
+    background-color: #eaeaea;
+    border-top: 2px solid #34444f;
+}
+
+.number {
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+}
+
+.person-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    flex: 1;
+}
+
+.right .person-name { color: #3ae374; font-weight: bold; }
+.wrong .person-name { color: #ff3838; font-weight: bold; }
+
+.check-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: var(--background-color);
+    border: none;
+}
